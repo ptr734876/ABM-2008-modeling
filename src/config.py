@@ -27,13 +27,22 @@ class ModelConfig:
         'distribution': 'poisson'
     }
 
+    EXPENSES_CONFIG = {
+        'first_adult': 0.7,
+        'additional_adult': 0.5,
+        'child': 0.3,
+        'base_consumption_share': 0.75,
+        'floor_per_equivalent': 920
+    }
     # calibrated
     MONTHLY_EXPENSES_PER_PERSON = 1_683
 
     # calibrated
     MORTGAGE_CONFIG = {
+        'avg_monthly_applications_rate': 0.0126,
+        'max_applications_per_bank_per_step': None,
         'term_months': 360,
-        'max_payment_to_income_ratio': 0.41,
+        'max_payment_to_income_ratio': 0.28,
         'min_loan_amount': 50_000,
         'max_loan_amount': 417_000,
         'delinquency_limit': 3
